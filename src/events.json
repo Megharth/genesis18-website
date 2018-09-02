@@ -1,0 +1,49 @@
+{
+  "events": [
+    {
+      "name": "xyz event",
+      "price": "30",
+      "department": "one",
+      "rounds": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
+      ]
+    },
+    {
+      "name": "xyz event",
+      "price": "30",
+      "department": "one",
+      "rounds": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
+      ]
+    },
+    {
+      "name": "xyz event",
+      "price": "30",
+      "department": "two",
+      "rounds": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
+      ]
+    },
+    {
+      "name": "xyz event",
+      "price": "30",
+      "department": "two",
+      "rounds": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
+      ]
+    },
+    {
+      "name": "xyz event",
+      "price": "30",
+      "department": "two",
+      "rounds": [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
+      ]
+    }
+  ]
+}

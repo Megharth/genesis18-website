@@ -1,0 +1,79 @@
+<template>
+  <div>
+    <navbarComponent></navbarComponent>
+    <div class="container">
+      <div class="heading">{{department}}</div>
+      <div v-for="event in events">
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-btn block href="#" v-b-toggle="event.id">{{event.name}}</b-btn>
+          </b-card-header>
+          <b-collapse :id="event.id" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <div v-for="(round, index) in event.rounds" class="card-text">
+                <div class="sub-heading">Round {{index+1}}</div>
+                <p class="">{{round}}</p>
+              </div>
+              <div class="cart-btn btn ml-auto" @click="addToCart(event)">Add to cart</div>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import navbarComponent from '../components/navbarComponent'
+export default {
+  name: 'department',
+  components: {
+    navbarComponent
+  },
+  data() {
+    return {
+      department: null,
+      events: null
+    }
+  },
+  methods: {
+    addToCart(event) {
+      this.$store.commit('addToCart', event)
+    }
+  },
+  created() {
+    let id = this.$route.params.id
+    this.$store.state.departments.forEach((department) => {
+      if(department.id === id){
+        this.department = department.name
+        this.events = department.events
+      }
+    })
+  }
+}
+</script>
+
+<style scoped lang="sass">
+
+.container
+  margin-top: 20px
+.card
+  box-shadow: 5px 5px 5px #333333
+  margin-top: 20px
+  a.btn.btn-secondary.btn-block
+    text-transform: uppercase
+    font-weight: bolder
+
+.cart-btn
+  background: #EF8354
+  color: white
+  display: block
+  max-width: 150px
+  box-shadow: 2px 2px 2px #333333
+
+.sub-heading
+  font-size: 20px
+  color: #EF8354
+  text-transform: uppercase
+  font-weight: bold
+</style>
