@@ -12,7 +12,8 @@
           "department": "one",
           "rounds": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event2",
@@ -21,7 +22,8 @@
           "department": "one",
           "rounds": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event3",
@@ -32,7 +34,8 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event4",
@@ -43,7 +46,8 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         }
 
       ]
@@ -61,7 +65,8 @@
           "rounds": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event6",
@@ -70,7 +75,8 @@
           "department": "one",
           "rounds": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event7",
@@ -81,7 +87,8 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         },
         {
           "id": "event8",
@@ -92,7 +99,8 @@
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.",
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore libero qui quia veritatis voluptatibus! A accusantium adipisci alias cum dignissimos excepturi exercitationem hic id ipsam laudantium obcaecati praesentium, quod saepe."
-          ]
+          ],
+          "checked": false
         }
 
       ]

@@ -5,10 +5,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App.vue'
 import router from './router'
 import {store} from './store/index'
+import VueResource from 'vue-resource'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(VueResource)
 
 
 new Vue({

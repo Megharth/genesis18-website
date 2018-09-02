@@ -14,10 +14,10 @@
             <b-nav-item href="#" class="mx-auto" to="/login">Login</b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav>
-            <b-nav-item href="#" class="mx-auto">Cart</b-nav-item>
+            <b-nav-item href="#" class="mx-auto" to="/cart">Cart</b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav>
-            <b-nav-item href="#" class="mx-auto" to="/">Logout</b-nav-item>
+            <b-nav-item href="#" class="mx-auto">Logout</b-nav-item>
           </b-navbar-nav>
         </b-navbar-nav>
       </b-collapse>
