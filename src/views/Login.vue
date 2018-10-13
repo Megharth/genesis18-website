@@ -2,13 +2,23 @@
   <div>
     <navbarComponent></navbarComponent>
     <div class="container login">
-      <b-input-group size="lg">
-        <b-form-input placeholder="Id" v-model="id"></b-form-input>
-      </b-input-group>
-      <b-input-group size="lg">
-        <b-form-input placeholder="password" v-model="password"></b-form-input>
-      </b-input-group>
-      <button class="btn mx-auto" @click="login">Submit</button>
+      <div class="login" v-if="!forgotPassword">
+        <b-input-group size="lg">
+          <b-form-input placeholder="Id" v-model="id"></b-form-input>
+        </b-input-group>
+        <b-input-group size="lg">
+          <b-form-input placeholder="password" v-model="password"></b-form-input>
+        </b-input-group>
+      </div>
+      <div class="forgot" v-if="forgotPassword">
+        <b-input-group size="lg">
+          <b-form-input placeholder="Id" v-model="id"></b-form-input>
+        </b-input-group>
+      </div>
+      <button class="btn mx-auto" @click="login" v-if="!forgotPassword">Login</button>
+      <button class="btn mx-auto" @click="forgot" v-if="forgotPassword">Submit</button>
+      <button class="btn mx-auto" @click="forgotPassword = true" v-if="!forgotPassword">Forgot Password</button>
+      <button class="btn mx-auto" @click="forgotPassword = false" v-if="forgotPassword">Go back to login</button>
     </div>
   </div>
 </template>
@@ -23,17 +33,26 @@
     data() {
       return {
         id: null,
-        password: null
+        password: null,
+        forgotPassword: false
       }
     },
     methods: {
       login() {
-        this.$http.post('https://blooming-crag-77659.herokuapp.com/user/login', {
-          id: this.id,
+        this.$http.post('https://floating-mesa-45263.herokuapp.com/user/login', {
+          username: this.id,
           password: this.password
         }).then(function(response) {
-          console.log(response)
+          let resp = JSON.parse(response.bodyText)
+          let user = resp.participant
+          user.authToken = resp.token
+          this.$store.commit('login', user)
+          this.$router.push('/')
         })
+      },
+      forgot() {
+        this.forgotPassword = false
+        console.log(this.id)
       }
     }
   }

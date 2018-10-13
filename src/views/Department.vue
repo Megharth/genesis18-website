@@ -21,12 +21,15 @@
           </b-collapse>
         </b-card>
       </div>
+      <div class="checkout-btn btn ml-auto" v-if="user.pendingOrder.sum" @click="goToCart">Proceed to
+        Checkout</div>
     </div>
   </div>
 </template>
 
 <script>
 import navbarComponent from '../components/navbarComponent'
+import {mapState} from 'vuex'
 export default {
   name: 'department',
   components: {
@@ -35,15 +38,26 @@ export default {
   data() {
     return {
       department: null,
-      events: null
+      events: null,
     }
   },
   methods: {
+    goToCart() {
+      this.$router.push('/cart')
+    },
     addToCart(event, index) {
-      this.events[index].checked = true
-      console.log(this.events[index].checked)
-      this.$store.commit('addToCart', event)
+      if(this.user.authToken){
+        this.$store.commit('addToCart', event)
+      }
+      else
+        this.$router.push('/login')
+
     }
+  },
+  computed: {
+     ...mapState({
+       user: state => state.user
+     })
   },
   created() {
     let id = this.$route.params.id
@@ -68,12 +82,16 @@ export default {
     text-transform: uppercase
     font-weight: bolder
 
-.cart-btn
+.cart-btn, .checkout-btn
   background: #EF8354
   color: white
   display: block
   max-width: 150px
   box-shadow: 2px 2px 2px #333333
+
+.checkout-btn
+  margin-top: 5%
+  max-width: 200px
 
 .sub-heading
   font-size: 20px

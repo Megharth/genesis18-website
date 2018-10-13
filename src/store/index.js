@@ -6,7 +6,7 @@ Vue.use(Vuex)
 import eventObj from '../events'
 import departmentObj from '../departments'
 
-let events= eventObj.events
+let events = eventObj.events
 let departments = departmentObj.departments
 
 let dept_one = []
@@ -15,24 +15,70 @@ events.forEach((event) => {
   if(event.department === "one")
     dept_one.push(event)
 })
+
 export const store = new Vuex.Store({
   state: {
     events,
     departments,
-    user: null,
-    order: {
-      events: [],
-      sum: 0
+    order: [],
+    user: {
+      name: null,
+      authToken: null,
+      pendingOrder: {
+        events: [],
+        sum: 0
+      }
     }
   },
   mutations: {
+    login(state, user) {
+      let orderList = Object.assign([], user.orders)
+      let ordersPage = {
+        events: [],
+        sum: 0
+      }
+      state.user = user
+      orderList.forEach(function(order) {
+        for(let eventId in order.events){
+          state.events.forEach(function(event) {
+            if(order.events[eventId] === event.id){
+              ordersPage.events.push(event)
+              ordersPage.sum += parseFloat(event.price)
+            }
+          })
+        }
+        state.order.push(ordersPage)
+      })
+      state.user = user
+      localStorage.setItem('order', JSON.stringify(state.order))
+      localStorage.setItem('user', JSON.stringify(user))
+    },
+    logout(state) {
+      state.user = {
+        name: null,
+        authToken: null,
+        orders: [],
+        pendingOrder: {
+          events: [],
+          sum: 0
+        }
+      }
+    },
     addToCart(state, event) {
-      state.order.events.push(event)
-      state.order.sum += parseFloat(event.price)
+      console.log("in add to cart")
+      state.user.pendingOrder.events.push(event)
+      state.user.pendingOrder.sum += parseFloat(event.price)
+      localStorage.setItem('user', JSON.stringify(state.user))
+    },
+    confirmOrder(state) {
+      const order = Object.assign({}, state.user.pendingOrder)
+      state.order.push(order)
+      localStorage.setItem('order', JSON.stringify(state.order))
     },
     clearCart(state) {
-      state.order.events = []
-      state.order.sum = 0
+      state.user.pendingOrder.events = []
+      state.user.pendingOrder.sum = 0
+      localStorage.setItem('user', JSON.stringify(state.user))
     }
   }
 })

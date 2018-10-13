@@ -1,0 +1,37 @@
+.navbar-dark
+  z-index: 1
+  background: #2D3142
+  color: #FFFFFB
+  opacity: 0
+  margin-right: 0
+  position: fixed
+  width: 100%
+  box-shadow: 0 5px 5px #333333
+  a
+    color: #FFFFFB
+    font-size: 20px
+    margin-right: 10px
+    .nav-link
+      .active
+        color: $secondaryColor
+
+  .navbar-brand
+    display: flex
+    font-family: Neptune, sans-serif
+    img
+      height: 35px
+    .brand-title
+      margin-left: 8px
+      display: inline-block
+      font-size: 25px
+      @include textGrad
+
+
+  .navbar-toggler, .navbar-toggler:focus
+    border: none
+    outline: 0
+    margin-top: 5px
+
+
+.show
+  opacity: 1

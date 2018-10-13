@@ -12,6 +12,9 @@ body
   background: #4F5D75
   font-family: 'Titillium Web', sans-serif
 
+::-webkit-scrollbar
+  display: none
+
 .heading
   text-align: center
   font-size: 45px

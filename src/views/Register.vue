@@ -3,21 +3,22 @@
     <navbarComponent></navbarComponent>
     <div class="container register">
       <b-input-group size="lg">
-        <b-form-input placeholder="Name"></b-form-input>
+        <b-form-input v-model="name" placeholder="Name"></b-form-input>
       </b-input-group>
       <b-input-group size="lg">
-        <b-form-input placeholder="Id Number"></b-form-input>
+        <b-form-input v-model="id" placeholder="Id Number"></b-form-input>
       </b-input-group>
       <b-input-group size="lg">
-        <b-form-input placeholder="Mobile Number"></b-form-input>
+        <b-form-input v-model="mobile" placeholder="Mobile Number"></b-form-input>
       </b-input-group>
       <b-input-group size="lg">
-        <b-form-select v-model="yearSelected" :options="yearOptions" placeholder="year"/>
+        <b-form-select v-model="yearSelected" :options="yearOptions"></b-form-select>
       </b-input-group>
       <b-input-group size="lg">
-        <b-form-select v-model="branchSelected" :options="branchOptions" placeholder="year" />
+        <b-form-select v-model="branchSelected" :options="branchOptions"> </b-form-select>
       </b-input-group>
       <button class="btn mx-auto" @click="react">Submit</button>
+      <div class="error heading" v-if="error">Please fill all the fields.</div>
     </div>
   </div>
 </template>
@@ -32,23 +33,27 @@
     },
     data() {
       return {
+        name: null,
+        mobile: null,
+        id: '',
         yearSelected: null,
         branchSelected: null,
+        error: false,
         yearOptions: [
           {
              value: null, text: 'Select year'
           },
           {
-            value: 1, text: 'First year'
+            value: "1", text: 'First year'
           },
           {
-            value: 2, text: 'Second year'
+            value: "2", text: 'Second year'
           },
           {
-            value: 3, text: 'Third year'
+            value: "3", text: 'Third year'
           },
           {
-            value: 4, text: 'Fourth year'
+            value: "4", text: 'Fourth year'
           }
         ],
         branchOptions: [
@@ -84,7 +89,21 @@
     },
     methods: {
       react() {
-        console.log(this.yearSelected)
+        if(this.name && this.mobile && this.id && this.yearSelected && this.branchSelected){
+          let id = this.id.toLowerCase()
+          this.$http.post('https://floating-mesa-45263.herokuapp.com/signup', {
+            id: id,
+            name: this.name,
+            number: this.mobile,
+            year: this.yearSelected,
+            branch: this.branchSelected
+          }).then(function(response) {
+            console.log(response)
+            this.$router.push('/login')
+          })
+        }
+        else
+          this.error = true
       }
     }
   }
@@ -96,4 +115,7 @@
 .register
   margin-top: 10%
 
+.error
+  margin-top: 3%
+  font-size: 30px
 </style>

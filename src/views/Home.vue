@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <navbarComponent></navbarComponent>
-    <landingComponent></landingComponent>
-    <div class="container">
+    <landingComponent class="logo"></landingComponent>
+    <div class="about">
       <div class="heading">About Genesis</div>
       <div class="discription">
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto perferendis quam unde vitae. Ab
@@ -52,6 +52,7 @@
 </template>
 
 <script>
+
 import {mapState} from 'vuex'
 import landingComponent from '../components/landingComponent.vue'
 import navbarComponent from '../components/navbarComponent'
@@ -70,14 +71,32 @@ export default {
      ...mapState({
        departments: state => state.departments
      })
+  },
+  mounted() {
+    window.onscroll = function() {
+      if(window.scrollY > 500)
+        document.querySelector('.navbar-dark').classList.add('show')
+      else
+        document.querySelector('.navbar-dark').classList.remove('show')
+    }
   }
 }
 </script>
 
 <style scoped lang="sass">
+@import '../sass/variables'
+
+.logo, .about, .departments
+  min-height: 100vh
+  padding: 5%
+  z-index: 0
+
+.about
+  background: $secondaryColor
+  width: 100%
 
 .departments
-  background: #EF8354
+  background: $primaryColor
   margin-top: 30px
   text-align: center
   .container
