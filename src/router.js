@@ -15,7 +15,11 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      beforeLeave() {
+        document.querySelector('.navbar-dark').classList.remove('drop')
+        document.querySelector('.navbar-dark').classList.remove('pull')
+      }
     },
     {
       path: '/login',

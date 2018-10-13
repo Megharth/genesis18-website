@@ -31,29 +31,27 @@
     outline: 0
     margin-top: 5px
 
-//.drop
-//  -webkit-animation: drop 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
-//  animation: drop 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
-//
-//@-webkit-keyframes drop
-//  0%
-//    -webkit-transform: translateY(-100%) translateZ(160px) rotateX(-180deg)
-//    opacity: 0
-//
-//  100%
-//    -webkit-transform: translateY(0) translateZ(0) rotateX(0)
-//    opacity: 1
-//
-//
-//.pull
-//  -webkit-animation: pull 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
-//  animation: pull 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
-//
-//@-webkit-keyframes pull
-//  0%
-//    -webkit-transform: translateY(0) translateZ(0) rotateX(0)
-//    opacity: 1
-//
-//  100%
-//    -webkit-transform: translateY(-100%) translateZ(160px) rotateX(-180deg)
-//    opacity: 0
+.drop
+  animation: drop 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+
+@-webkit-keyframes drop
+  0%
+    transform: translateY(-100%) translateZ(160px) rotateX(-180deg)
+    opacity: 0
+
+  100%
+    transform: translateY(0) translateZ(0) rotateX(0)
+    opacity: 1
+
+
+.pull
+  animation: pull 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+
+@-webkit-keyframes pull
+  0%
+    transform: translateY(0) translateZ(0) rotateX(0)
+    opacity: 1
+
+  100%
+    transform: translateY(-100%) translateZ(160px) rotateX(-180deg)
+    opacity: 0

@@ -73,23 +73,22 @@ export default {
      })
   },
   mounted() {
-    /*document.querySelector('.navbar-dark').style.opacity = 0
+    document.querySelector('.navbar-dark').style.opacity = 0
     let flag
     window.onscroll = function() {
       if(window.scrollY > 500){
-        document.querySelector('.navbar-dark').classList.remove('pull')
         document.querySelector('.navbar-dark').classList.add('drop')
+        document.querySelector('.navbar-dark').classList.remove('pull')
         flag = 1
       }
 
-      else{
+      if(window.scrollY < 500 && window.scrollY > 250){
         if(flag === 1){
-          document.querySelector('.navbar-dark').classList.remove('drop')
           document.querySelector('.navbar-dark').classList.add('pull')
+          document.querySelector('.navbar-dark').classList.remove('drop')
         }
-
       }
-    }*/
+    }
   }
 }
 </script>
