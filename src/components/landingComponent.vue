@@ -101,7 +101,6 @@ export default {
 @import '../sass/glitch'
 
 .text
-  text-transform: uppercase
   font-size: 45px
   color: $secondaryColor
   height: 100vh
@@ -113,7 +112,7 @@ export default {
   transform: translate(-50%, 0%)
 
 .glitch
-  font-family: $headingFont
+  font-family: $neptuneFont
   animation: color 3s ease-in-out
   text-align: center
 

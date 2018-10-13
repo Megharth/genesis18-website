@@ -30,7 +30,7 @@ export default {
       })
       this.$store.commit('confirmOrder')
       this.$store.commit('clearCart')
-      /*this.$http.post('https://floating-mesa-45263.herokuapp.com/participant', {
+      this.$http.post('https://floating-mesa-45263.herokuapp.com/participant', {
         id: this.user.id,
         sum: this.user.pendingOrder.sum,
         events: idArray
@@ -40,7 +40,7 @@ export default {
         }
       }).then(function(response){
         console.log(response)
-      })*/
+      })
     },
     cancelOrder() {
       this.$store.commit('clearCart')
@@ -56,7 +56,10 @@ export default {
 
 <style scoped lang="sass">
 .container
-  margin-top: 20px
+  position: absolute
+  margin-top: 100px
+  margin-left: 50%
+  transform: translate(-50%, 0)
 
 .btn
   background: #EF8354

@@ -2,6 +2,7 @@
   <div>
     <navbarComponent/>
     <div class="container">
+      <div class="heading">Orders</div>
       <div v-for="order in orders" class="orders">
         <orderComponent :order="order"/>
       </div>
@@ -34,9 +35,12 @@ export default {
 </script>
 
 <style scoped lang="sass">
-
 .container
-  margin-top: 5%
+  position: absolute
+  margin-top: 100px
+  margin-left: 50%
+  transform: translate(-50%, 0)
+  padding-bottom: 20px
 
 .orders
   margin-top: 20px

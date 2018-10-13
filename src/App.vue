@@ -4,8 +4,24 @@
   </div>
 </template>
 
-
+<script>
+import navbarComponent from './components/navbarComponent'
+export default {
+  name: 'MainComponent',
+  components: {
+    navbarComponent
+  }
+}
+</script>
 <style lang="sass">
+@font-face
+  font-family: 'Neptune'
+  src: url('./assets/Neptune_Trial.otf') format('opentype')
+  src: url('./assets/NeptuneTrial-Bold.eot')
+  src: url('./assets/NeptuneTrial-Bold.woff2') format('woff2')
+  src: url('./assets/NeptuneTrial-Bold.woff') format('woff')
+  src: url('./assets/NeptuneTrial-Bold.ttf') format('truetype')
+
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Play')
 
 body

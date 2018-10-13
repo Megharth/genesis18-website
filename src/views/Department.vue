@@ -74,7 +74,12 @@ export default {
 <style scoped lang="sass">
 
 .container
-  margin-top: 20px
+  position: absolute
+  margin-top: 100px
+  margin-left: 50%
+  transform: translate(-50%, 0)
+  padding-bottom: 20px
+
 .card
   box-shadow: 5px 5px 5px #333333
   margin-top: 20px

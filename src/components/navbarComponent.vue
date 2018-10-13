@@ -11,7 +11,7 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
-            <b-nav-item href="#" class="mx-auto" to="/">Home</b-nav-item>
+            <b-nav-item class="mx-auto" to="/">Home</b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav v-if="!user.authToken">
             <b-nav-item href="#" class="mx-auto" to="/register">Register</b-nav-item>

@@ -5,6 +5,8 @@ import Login from './views/Login.vue'
 import Register from './views/Register'
 import Department from './views/Department'
 import Cart from './views/Cart'
+import Orders from './views/Orders'
+import { store } from './store/index'
 
 Vue.use(Router)
 
@@ -33,7 +35,32 @@ export default new Router({
     {
       path: '/cart',
       name: 'cart',
-      component: Cart
+      component: Cart,
+      beforeEnter: (destination, source, next) => {
+        if(destination.name === "cart")
+          if(!store.state.user)
+            if(localStorage.getItem('user'))
+              next()
+            else
+              next(false)
+          else
+            next()
+      }
+    },
+    {
+      path: '/orders',
+      name: 'orders',
+      component: Orders,
+      beforeEnter: (destination, source, next) => {
+        if(destination.name === "orders")
+          if(!store.state.user)
+            if(localStorage.getItem('user'))
+              next()
+            else
+              next(false)
+          else
+            next()
+      }
     }
   ]
 })

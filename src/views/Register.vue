@@ -2,6 +2,7 @@
   <div>
     <navbarComponent></navbarComponent>
     <div class="container register">
+      <div class="heading">Register</div>
       <b-input-group size="lg">
         <b-form-input v-model="name" placeholder="Name"></b-form-input>
       </b-input-group>
@@ -113,7 +114,10 @@
 
 @import '../sass/input'
 .register
-  margin-top: 10%
+  position: absolute
+  margin-top: 100px
+  margin-left: 50%
+  transform: translate(-50%, 0)
 
 .error
   margin-top: 3%
