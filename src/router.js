@@ -13,13 +13,13 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '*',
+      redirect: '/'
+    },
+    {
       path: '/',
       name: 'home',
-      component: Home,
-      beforeLeave() {
-        document.querySelector('.navbar-dark').classList.remove('drop')
-        document.querySelector('.navbar-dark').classList.remove('pull')
-      }
+      component: Home
     },
     {
       path: '/login',

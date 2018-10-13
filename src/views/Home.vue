@@ -2,7 +2,7 @@
   <div class="home">
     <navbarComponent></navbarComponent>
     <landingComponent class="logo"></landingComponent>
-    <div class="about">
+    <div class="about" id="about">
       <div class="heading">About Genesis</div>
       <div class="discription">
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto perferendis quam unde vitae. Ab

@@ -27,7 +27,7 @@ export default {
 body
   background: #4F5D75
   font-family: 'Titillium Web', sans-serif
-
+  scroll-behavior: smooth
 ::-webkit-scrollbar
   display: none
 
