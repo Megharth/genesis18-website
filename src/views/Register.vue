@@ -1,27 +1,30 @@
 <template>
-  <div>
-    <navbarComponent></navbarComponent>
-    <div class="container register">
-      <div class="heading">Register</div>
-      <b-input-group size="lg">
-        <b-form-input v-model="name" placeholder="Name"></b-form-input>
-      </b-input-group>
-      <b-input-group size="lg">
-        <b-form-input v-model="id" placeholder="Id Number"></b-form-input>
-      </b-input-group>
-      <b-input-group size="lg">
-        <b-form-input v-model="mobile" placeholder="Mobile Number"></b-form-input>
-      </b-input-group>
-      <b-input-group size="lg">
-        <b-form-select v-model="yearSelected" :options="yearOptions"></b-form-select>
-      </b-input-group>
-      <b-input-group size="lg">
-        <b-form-select v-model="branchSelected" :options="branchOptions"> </b-form-select>
-      </b-input-group>
-      <button class="btn mx-auto" @click="react">Submit</button>
-      <div class="error heading" v-if="error">Please fill all the fields.</div>
+  <transition name="slide-in">
+    <div>
+      <navbarComponent></navbarComponent>
+      <div class="container register">
+        <div class="heading">Register</div>
+        <b-input-group size="lg">
+          <b-form-input v-model="name" placeholder="Name"></b-form-input>
+        </b-input-group>
+        <b-input-group size="lg">
+          <b-form-input v-model="id" placeholder="Id Number"></b-form-input>
+        </b-input-group>
+        <b-input-group size="lg">
+          <b-form-input v-model="mobile" placeholder="Mobile Number"></b-form-input>
+        </b-input-group>
+        <b-input-group size="lg">
+          <b-form-select v-model="yearSelected" :options="yearOptions"></b-form-select>
+        </b-input-group>
+        <b-input-group size="lg">
+          <b-form-select v-model="branchSelected" :options="branchOptions"> </b-form-select>
+        </b-input-group>
+        <button class="btn mx-auto" @click="react">Submit</button>
+        <div class="error heading" v-if="error">Please fill all the fields.</div>
+      </div>
     </div>
-  </div>
+  </transition>
+
 </template>
 
 <script>
@@ -111,8 +114,9 @@
 </script>
 
 <style scoped lang="sass">
-
 @import '../sass/input'
+@import '../sass/variables'
+
 .register
   position: absolute
   margin-top: 100px

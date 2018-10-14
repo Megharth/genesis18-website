@@ -1,30 +1,32 @@
 <template>
-  <div>
-    <navbarComponent></navbarComponent>
-    <div class="container">
-      <div class="heading">{{department}}</div>
-      <div v-for="(event, index) in events">
-        <b-card no-body class="mb-1">
-          <b-card-header header-tag="header" class="p-1" role="tab">
-            <b-btn block href="#" v-b-toggle="event.id">{{event.name}}</b-btn>
-          </b-card-header>
-          <b-collapse :id="event.id" accordion="my-accordion" role="tabpanel">
-            <b-card-body>
-              <div v-for="(round, index) in event.rounds" class="card-text">
-                <div class="sub-heading">Round {{index+1}}</div>
-                <p class="">{{round}}</p>
-              </div>
-              <button class="cart-btn btn ml-auto" :disabled="events[index].checked"
-                   @click="addToCart(event, index)">Add to
-                cart</button>
-            </b-card-body>
-          </b-collapse>
-        </b-card>
+  <transition name="puff-in">
+    <div>
+      <navbarComponent></navbarComponent>
+      <div class="container">
+        <div class="heading">{{department}}</div>
+        <div v-for="(event, index) in events">
+          <b-card no-body class="mb-1">
+            <b-card-header header-tag="header" class="p-1" role="tab">
+              <b-btn block href="#" v-b-toggle="event.id">{{event.name}}</b-btn>
+            </b-card-header>
+            <b-collapse :id="event.id" accordion="my-accordion" role="tabpanel">
+              <b-card-body>
+                <div v-for="(round, index) in event.rounds" class="card-text">
+                  <div class="sub-heading">Round {{index+1}}</div>
+                  <p class="">{{round}}</p>
+                </div>
+                <button class="cart-btn btn ml-auto" :disabled="events[index].checked"
+                        @click="addToCart(event, index)">Add to
+                  cart</button>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+        </div>
+        <div class="checkout-btn btn ml-auto" v-if="user.pendingOrder.sum" @click="goToCart">Proceed to
+          Checkout</div>
       </div>
-      <div class="checkout-btn btn ml-auto" v-if="user.pendingOrder.sum" @click="goToCart">Proceed to
-        Checkout</div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -67,11 +69,17 @@ export default {
         this.events = department.events
       }
     })
+  },
+  mounted() {
+    window.onscroll = () => {
+      document.querySelector('.navbar-dark').classList.remove('pull')
+    }
   }
 }
 </script>
 
 <style scoped lang="sass">
+@import '../sass/variables'
 
 .container
   position: absolute

@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <navbarComponent></navbarComponent>
-    <div class="container">
-      <div class="heading">Cart</div>
+  <transition name="slide-rotate">
+    <div>
+      <navbarComponent></navbarComponent>
+      <div class="container">
+        <div class="heading">Cart</div>
         <orderComponent :order="user.pendingOrder"></orderComponent>
         <div class="row" v-if="user.pendingOrder.sum">
           <div class="btn cancel-btn mx-auto" @click="cancelOrder">Cancel Order</div>
           <div class="btn mx-auto" @click="generateOrder">Submit Order</div>
         </div>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -41,6 +43,8 @@ export default {
       }).then(function(response){
         console.log(response)
       })
+      //PUT THE FOLLOWING INTO PROMISE
+      this.$router.push('/orders')
     },
     cancelOrder() {
       this.$store.commit('clearCart')
@@ -55,6 +59,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import '../sass/variables'
+
 .container
   position: absolute
   margin-top: 100px

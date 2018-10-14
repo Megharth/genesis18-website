@@ -1,0 +1,45 @@
+.logo, .about, .departments
+  min-height: 100vh
+  padding: 5%
+  z-index: 0
+
+.about
+  background: $secondaryColor
+  width: 100%
+  color: white
+  text-align: justify
+
+.departments
+  background: $primaryColor
+  margin-top: 30px
+  text-align: center
+  .container
+    padding-top: 20px
+
+  .department-card
+    background: #FFFFFF
+    color: white
+    background: url(http://klevinskaitej.files.wordpress.com/2012/11/noise1.gif)
+    cursor: pointer
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: bold
+    max-width: 300px
+    height: 200px
+    margin-top: 20px
+    transition: all 0.2s ease-in-out
+    box-shadow: 0 0 5px 3px #494949
+    &:hover
+      transform: scale(1.1)
+    .dept-name
+      padding: 20px
+      position: relative
+      top: 50%
+      text-align: left
+      transform: translateY(-50%)
+      span
+        background: #C61B2B
+        padding-right: 5px
+
+    img
+      width: inherit

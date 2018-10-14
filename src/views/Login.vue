@@ -1,27 +1,29 @@
 <template>
-  <div>
-    <navbarComponent></navbarComponent>
-    <div class="container login-container">
-      <div class="heading">Login</div>
-      <div class="login mx-auto" v-if="!forgotPassword">
-        <b-input-group size="lg">
-          <b-form-input placeholder="Id" v-model="id"></b-form-input>
-        </b-input-group>
-        <b-input-group size="lg">
-          <b-form-input placeholder="password" v-model="password" type="password"></b-form-input>
-        </b-input-group>
+  <transition name="flip-in">
+    <div>
+      <navbarComponent></navbarComponent>
+      <div class="container login-container">
+        <div class="heading">Login</div>
+        <div class="login mx-auto" v-if="!forgotPassword">
+          <b-input-group size="lg">
+            <b-form-input placeholder="Id" v-model="id"></b-form-input>
+          </b-input-group>
+          <b-input-group size="lg">
+            <b-form-input placeholder="password" v-model="password" type="password"></b-form-input>
+          </b-input-group>
+        </div>
+        <div class="forgot" v-if="forgotPassword">
+          <b-input-group size="lg">
+            <b-form-input placeholder="Id" v-model="id"></b-form-input>
+          </b-input-group>
+        </div>
+        <button class="btn mx-auto" @click="login" v-if="!forgotPassword">Login</button>
+        <button class="btn mx-auto" @click="forgot" v-if="forgotPassword">Submit</button>
+        <button class="btn mx-auto" @click="forgotPassword = true" v-if="!forgotPassword">Forgot Password</button>
+        <button class="btn mx-auto" @click="forgotPassword = false" v-if="forgotPassword">Go back to login</button>
       </div>
-      <div class="forgot" v-if="forgotPassword">
-        <b-input-group size="lg">
-          <b-form-input placeholder="Id" v-model="id"></b-form-input>
-        </b-input-group>
-      </div>
-      <button class="btn mx-auto" @click="login" v-if="!forgotPassword">Login</button>
-      <button class="btn mx-auto" @click="forgot" v-if="forgotPassword">Submit</button>
-      <button class="btn mx-auto" @click="forgotPassword = true" v-if="!forgotPassword">Forgot Password</button>
-      <button class="btn mx-auto" @click="forgotPassword = false" v-if="forgotPassword">Go back to login</button>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -61,6 +63,7 @@
 
 <style scoped lang="sass">
 @import "../sass/input"
+@import '../sass/variables'
 .login-container
   position: absolute
   margin-top: 100px

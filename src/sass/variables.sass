@@ -21,3 +21,108 @@ $neptuneFont: 'Neptune', sans-serif
   background: -webkit-linear-gradient(to right, #E26135, #C61B2B) !important
   -webkit-background-clip: text !important
   -webkit-text-fill-color: transparent !important
+
+
+.slide-enter-active
+  animation: slide 0.5s forwards cubic-bezier(0.455, 0.030, 0.515, 0.955)
+
+@keyframes slide
+  0%
+    -webkit-transform: rotateY(-180deg) scale(1)
+    -moz-transform: rotateY(-180deg) scale(1)
+    -ms-transform: rotateY(-180deg) scale(1)
+    -o-transform: rotateY(-180deg) scale(1)
+    transform: rotateY(-180deg) scale(1)
+
+  0%
+    -webkit-transform: rotateY(-90deg) scale(1.5)
+    -moz-transform: rotateY(-90deg) scale(1.5)
+    -ms-transform: rotateY(-90deg) scale(1.5)
+    -o-transform: rotateY(-90deg) scale(1.5)
+    transform: rotateY(-90deg) scale(1.5)
+
+  100%
+    -webkit-transform: rotateY(0deg) scale(1)
+    -moz-transform: rotateY(0deg) scale(1)
+    -ms-transform: rotateY(0deg) scale(1)
+    -o-transform: rotateY(0deg) scale(1)
+    transform: rotateY(0deg) scale(1)
+
+.fade-enter-active
+  animation: fade 0.5s forwards ease-in-out
+
+@keyframes fade
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+.slide-rotate-enter-active
+  animation: slide-rotate 0.5s forwards cubic-bezier(0.455, 0.030, 0.515, 0.955)
+
+@keyframes slide-rotate
+  0%
+    -webkit-transform: translateX(-100%) translateZ(0) rotateY(-180deg)
+    transform: translateX(-100%) translateZ(0) rotateY(-180deg)
+    -webkit-transform-origin: 0% 50%
+    transform-origin: 100% 50%
+    opacity: 0
+    
+  100%
+    -webkit-transform: translateX(0%) translateZ(160px) rotateY(0deg)
+    transform: translateX(0%) translateZ(160px) rotateY(0deg)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+    opacity: 1
+
+.flip-in-enter-active
+  animation: flip-in 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940)
+
+@keyframes flip-in
+  0%
+    -webkit-transform: rotateX(80deg)
+    transform: rotateX(80deg)
+    opacity: 0
+
+  100%
+    -webkit-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+
+.slide-in-enter-active
+  animation: slide-in 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940)
+
+
+@keyframes  slide-in
+  0%
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0)
+    transform: translateY(-600px) rotateX(-30deg) scale(0)
+    -webkit-transform-origin: 50% 100%
+    transform-origin: 50% 100%
+    opacity: 0
+
+  100%
+    -webkit-transform: translateY(0) rotateX(0) scale(1)
+    transform: translateY(0) rotateX(0) scale(1)
+    -webkit-transform-origin: 50% 1400px
+    transform-origin: 50% 1400px
+    opacity: 1
+
+.puff-in-enter-active
+  animation: puff-in 0.5s forwards cubic-bezier(0.470, 0.000, 0.745, 0.715)
+
+@keyframes puff-in
+  0%
+    -webkit-transform: scale(2)
+    transform: scale(2)
+    -webkit-filter: blur(2px)
+    filter: blur(2px)
+    opacity: 0
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-filter: blur(0)
+    filter: blur(0)
+    opacity: 1

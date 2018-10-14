@@ -39,8 +39,4 @@ body
   text-transform: uppercase
   font-family: 'Play', sans-serif
 
-.discription
-  text-align: justify
-  font-size: 18px
-  color: #BFC0C0
 </style>

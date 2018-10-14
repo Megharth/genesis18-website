@@ -2,7 +2,6 @@
   "name": "genesis18",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/bvmites/genesis18-website",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
