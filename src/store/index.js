@@ -9,12 +9,6 @@ import departmentObj from '../departments'
 let events = eventObj.events
 let departments = departmentObj.departments
 
-let dept_one = []
-
-events.forEach((event) => {
-  if(event.department === "one")
-    dept_one.push(event)
-})
 
 export const store = new Vuex.Store({
   state: {
@@ -65,9 +59,8 @@ export const store = new Vuex.Store({
       }
     },
     addToCart(state, event) {
-      console.log("in add to cart")
       state.user.pendingOrder.events.push(event)
-      state.user.pendingOrder.sum += parseFloat(event.price)
+      state.user.pendingOrder.sum += parseFloat(event.entryFee)
       localStorage.setItem('user', JSON.stringify(state.user))
     },
     confirmOrder(state) {

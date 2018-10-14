@@ -5,7 +5,7 @@
       <div class="container">
         <div class="heading">Cart</div>
         <orderComponent :order="user.pendingOrder"></orderComponent>
-        <div class="row" v-if="user.pendingOrder.sum">
+        <div class="row action-btns" v-if="user.pendingOrder.sum">
           <div class="btn cancel-btn mx-auto" @click="cancelOrder">Cancel Order</div>
           <div class="btn mx-auto" @click="generateOrder">Submit Order</div>
         </div>
@@ -70,10 +70,11 @@ export default {
 .btn
   background: #EF8354
   color: white
-  /*display: block*/
   max-width: 150px
   margin-top: 2%
   box-shadow: 2px 2px 2px #333333
+  &:active
+    box-shadow: none
 
 .cancel-btn
   background: rgba(243, 72, 89, 0.87)
@@ -89,4 +90,7 @@ export default {
   padding-right: 13px
 .col-sm-1, .col-sm-8, .col-sm-3
   width: inherit
+
+.action-btns
+  margin-top: 20px
 </style>

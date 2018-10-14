@@ -7,9 +7,9 @@
       <b-card title="Order">
         <div v-for="(event, index) in order.events" class="row mx-auto">
           <div class="event-name">
-            {{index+1}}. {{event.name}}
+            {{index+1}}. {{event.eventName}}
           </div>
-          <div class="ml-auto">{{event.price}}</div>
+          <div class="ml-auto">{{event.entryFee}}</div>
         </div>
         <div class="total">
           <div class="row">

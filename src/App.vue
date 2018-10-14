@@ -24,6 +24,7 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Play')
 
+
 body
   background: #4F5D75
   font-family: 'Titillium Web', sans-serif
