@@ -6,23 +6,23 @@
       <div class="about" id="about">
         <div class="heading">About Genesis</div>
         <div class="description">
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto perferendis quam unde vitae. Ab
-            aperiam consectetur dignissimos id, odio repudiandae similique sint ut vel. Ab atque inventore quae voluptas.
+          <div class="content">
+            As the legacy of innovation and discoveries continue to flow through each
+            youngster’s blood, Genesis’18 comes as a perfect stage cum platform for students
+            of BVM to learn, innovate and experience things like never before. This Technical
+            Festival will provide the students with opportunities to explore and discuss issues
+            of scientific and Technological interest and motivate them to administer their ideas
+            in real life application.
           </div>
-          <div>Aliquid blanditiis cupiditate dolor dolores facere facilis quidem reiciendis, rem? Ab autem consequatur
-            corporis doloremque facilis fugiat harum molestias nulla provident quas quibusdam quisquam quod similique sit,
-            unde velit voluptatibus?
+          <div class="content">
+            Genesis’18 comes out with great expectations as its predecessor Genesis’17 was a
+            great success with over 1300 entries in all events. The main purpose continues to
+            remain encouragement of students to participate and to maintain the quality of
+            events so as to let the students have a wonderful overall experience.
           </div>
-          <div>A aut eaque enim error esse et fugiat iste itaque maiores modi molestiae molestias necessitatibus officiis
-            quae quaerat quam quas quasi, quos repudiandae sed tempore unde veritatis voluptate voluptates voluptatibus?
-          </div>
-          <div>Accusamus aut deleniti eius esse explicabo facere facilis fuga illum inventore ipsum iste laudantium,
-            neque, numquam perspiciatis porro praesentium quae quas quisquam repellat rerum similique sint tempora tempore
-            voluptate voluptatibus.
-          </div>
-          <div>A blanditiis dolor, dolorum expedita illo in modi mollitia nihil obcaecati perferendis similique suscipit
-            vitae. Consequatur corporis cupiditate dignissimos laboriosam, laborum libero molestias, numquam perferendis
-            provident, ratione similique voluptas voluptatum.
+          <div class="content">
+            With 27 Technical events and 3 non-technical events, Genesis’18 strives to have a
+            massive participation of over 3000 entries.
           </div>
         </div>
       </div>

@@ -57,6 +57,7 @@ export const store = new Vuex.Store({
           sum: 0
         }
       }
+      localStorage.clear()
     },
     addToCart(state, event) {
       state.user.pendingOrder.events.push(event)

@@ -19,8 +19,9 @@
         </div>
         <button class="btn mx-auto" @click="login" v-if="!forgotPassword">Login</button>
         <button class="btn mx-auto" @click="forgot" v-if="forgotPassword">Submit</button>
-        <button class="btn mx-auto" @click="forgotPassword = true" v-if="!forgotPassword">Forgot Password</button>
-        <button class="btn mx-auto" @click="forgotPassword = false" v-if="forgotPassword">Go back to login</button>
+        <!--<button class="btn mx-auto" @click="goToForget" v-if="!forgotPassword">Forgot Password</button>-->
+        <!--<button class="btn mx-auto" @click="forgotPassword = false" v-if="forgotPassword">Go back to login</button>-->
+        <div class="error heading" v-if="error">{{error}}</div>
       </div>
     </div>
   </transition>
@@ -37,21 +38,32 @@
       return {
         id: null,
         password: null,
-        forgotPassword: false
+        forgotPassword: false,
+        error: null
       }
     },
     methods: {
+      goToForget() {
+        this.forgotPassword = true
+        this.error = null
+      },
       login() {
-        this.$http.post('https://floating-mesa-45263.herokuapp.com/user/login', {
-          username: this.id,
-          password: this.password
-        }).then(function(response) {
-          let resp = JSON.parse(response.bodyText)
-          let user = resp.participant
-          user.authToken = resp.token
-          this.$store.commit('login', user)
-          this.$router.push('/')
-        })
+        if(this.id && this.password){
+          this.$http.post('https://floating-mesa-45263.herokuapp.com/user/login', {
+            username: this.id.toLowerCase(),
+            password: this.password
+          }).then(function(response) {
+            let resp = JSON.parse(response.bodyText)
+            let user = resp.participant
+            user.authToken = resp.token
+            this.$store.commit('login', user)
+            this.$router.push('/')
+          }).catch(function(error){
+            this.error = error.body.message
+          })
+        }
+        else
+          this.error = "Please Enter Username and Password"
       },
       forgot() {
         this.forgotPassword = false

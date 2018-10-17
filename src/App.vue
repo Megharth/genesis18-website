@@ -40,4 +40,8 @@ body
   text-transform: uppercase
   font-family: 'Play', sans-serif
 
+.sub-heading
+  font-size: 28px
+  color: white
+  text-transform: uppercase
 </style>

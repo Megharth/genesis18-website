@@ -10,6 +10,7 @@
           <div class="btn mx-auto" @click="generateOrder">Submit Order</div>
         </div>
       </div>
+      <div class="error sub-heading" v-if="error">{{error}}</div>
     </div>
   </transition>
 </template>
@@ -25,16 +26,19 @@ export default {
     navbarComponent,
     orderComponent
   },
+  data() {
+    return {
+      error: null
+    }
+  },
   methods: {
     generateOrder() {
       let idArray = this.user.pendingOrder.events.map((event)=> {
-        return event.id
+        return event._id
       })
-      this.$store.commit('confirmOrder')
-      this.$store.commit('clearCart')
       this.$http.post('https://floating-mesa-45263.herokuapp.com/participant', {
         id: this.user.id,
-        sum: this.user.pendingOrder.sum,
+        sum: parseInt(this.user.pendingOrder.sum),
         events: idArray
       }, {
         headers: {
@@ -42,9 +46,12 @@ export default {
         }
       }).then(function(response){
         console.log(response)
+        this.$store.commit('confirmOrder')
+        this.$store.commit('clearCart')
+        this.$router.push('/orders')
+      }).catch(function(error) {
+        this.error = error.body.message
       })
-      //PUT THE FOLLOWING INTO PROMISE
-      this.$router.push('/orders')
     },
     cancelOrder() {
       this.$store.commit('clearCart')
@@ -84,8 +91,8 @@ export default {
   @media screen and (min-width: 320px) and (max-width: 520px)
     .event-name
       max-width: 250px
-.sub
-  font-size: 30px
+.sub-heading
+  text-align: center
 .total
   padding-right: 13px
 .col-sm-1, .col-sm-8, .col-sm-3

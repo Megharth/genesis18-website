@@ -4,23 +4,22 @@
       <navbarComponent></navbarComponent>
       <div class="container register">
         <div class="heading">Register</div>
+        <div class="sub-heading">Name</div>
         <b-input-group size="lg">
           <b-form-input v-model="name" placeholder="Name"></b-form-input>
         </b-input-group>
+        <div class="sub-heading">Id number</div>
         <b-input-group size="lg">
-          <b-form-input v-model="id" placeholder="Id Number"></b-form-input>
+          <b-form-select v-model="yearSelected" :options="yearOptions"></b-form-select>
+          <b-form-select v-model="branchSelected" :options="branchOptions"></b-form-select>
+          <b-form-input v-model="id" placeholder="038"></b-form-input>
         </b-input-group>
+        <div class="sub-heading">Mobile Number</div>
         <b-input-group size="lg">
           <b-form-input v-model="mobile" placeholder="Mobile Number"></b-form-input>
         </b-input-group>
-        <b-input-group size="lg">
-          <b-form-select v-model="yearSelected" :options="yearOptions"></b-form-select>
-        </b-input-group>
-        <b-input-group size="lg">
-          <b-form-select v-model="branchSelected" :options="branchOptions"> </b-form-select>
-        </b-input-group>
         <button class="btn mx-auto" @click="react">Submit</button>
-        <div class="error heading" v-if="error">Please fill all the fields.</div>
+        <div class="error heading" v-if="error">Please fill all the fields correctly.</div>
       </div>
     </div>
   </transition>
@@ -43,67 +42,71 @@
         yearSelected: null,
         branchSelected: null,
         error: false,
+        errorMsg: null,
         yearOptions: [
           {
-             value: null, text: 'Select year'
+             value: null, text: 'Year'
           },
           {
-            value: "1", text: 'First year'
+            value: "18", text: '18'
           },
           {
-            value: "2", text: 'Second year'
+            value: "17", text: '17'
           },
           {
-            value: "3", text: 'Third year'
+            value: "16", text: '16'
           },
           {
-            value: "4", text: 'Fourth year'
+            value: "15", text: '15'
           }
         ],
         branchOptions: [
           {
-            value: null, text: 'Select Branch'
+            value: null, text: 'Branch'
           },
           {
-            value: 'Civil', text: 'Civil'
+            value: 'ce', text: 'CE'
           },
           {
-            value: 'Electronics', text: 'Electronics'
+            value: 'el', text: 'EL'
           },
           {
-            value: 'Electrical', text: 'Electrical'
+            value: 'ee', text: 'EE'
           },
           {
-            value: 'IT', text: 'IT'
+            value: 'it', text: 'IT'
           },
           {
-            value: 'Computer', text: 'Computer'
+            value: 'cp', text: 'CP'
           },
           {
-            value: 'EC', text: 'EC'
+            value: 'ec', text: 'EC'
           },
           {
-            value: 'Mechanical', text: 'Mechanical'
+            value: 'me', text: 'ME'
           },
           {
-            value: 'Production', text: 'Production'
+            value: 'pe', text: 'PE'
           }
         ]
       }
     },
     methods: {
       react() {
-        if(this.name && this.mobile && this.id && this.yearSelected && this.branchSelected){
-          let id = this.id.toLowerCase()
+        if(this.name && this.mobile && this.id.length >= 2 && this.id.length <=3 && this.yearSelected && this.branchSelected){
+          let id = this.yearSelected + this.branchSelected + this.id
+          let year = 19 - parseInt(this.yearSelected)
           this.$http.post('https://floating-mesa-45263.herokuapp.com/signup', {
             id: id,
             name: this.name,
             number: this.mobile,
-            year: this.yearSelected,
+            year: year.toString(),
             branch: this.branchSelected
           }).then(function(response) {
             console.log(response)
             this.$router.push('/login')
+          }).catch(function(error) {
+
           })
         }
         else
@@ -123,7 +126,16 @@
   margin-left: 50%
   transform: translate(-50%, 0)
 
+.sub-heading
+  margin-top: 10px
+
 .error
   margin-top: 3%
   font-size: 30px
+
+.input-group
+  margin-top: 5px
+
+.form-control
+  margin-right: 10px
 </style>
