@@ -70,7 +70,7 @@
             20
           ],
           "entryFee": 20,
-          "eventName": "Webholic",
+          "eventName": "Webpholic",
           "eventType": "tech",
           "managers": [
             {
@@ -84,7 +84,7 @@
           ],
           "rounds": [
             "This round will be pen-paper test of questions related to simple web related knowledge.",
-            "It will be based on unique ideas and concepts of websites. All Participants will be asked to write down ideas and concepts for modern websites and unique features that they can think that websites can be developed upon. For example, if one want to write about ideas about Music website, they can list down various features, unique features of their website apart from other music websites. And if they write how to develop it, then it would be plus points.",
+            "Surprise Round",
             "Participants will be given limited no of tags based on that they have to make web pages."
           ],
           "tagline": "Devide it by <div>",
