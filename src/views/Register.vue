@@ -18,6 +18,7 @@
         <b-input-group size="lg">
           <b-form-input v-model="mobile" placeholder="Mobile Number"></b-form-input>
         </b-input-group>
+        <div class="note">Note: Use the correct mobile as all the confirmations will be sent to it.</div>
         <button class="btn mx-auto" @click="react">Submit</button>
         <div class="error heading" v-if="error">Please fill all the fields correctly.</div>
       </div>
@@ -129,6 +130,11 @@
 .sub-heading
   margin-top: 10px
 
+.note
+  margin-top: 10px
+  font-size: 20px
+  color: white
+  text-align: center
 .error
   margin-top: 3%
   font-size: 30px
