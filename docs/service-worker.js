@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d78550d653e60e83cf1087c77b9a05d3.js"
+  "/precache-manifest.14dfbc8d6bc81e32063a32b11108fbf6.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "genesis18"});

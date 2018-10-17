@@ -53,12 +53,14 @@
             username: this.id.toLowerCase(),
             password: this.password
           }).then(function(response) {
+            console.log(response)
             let resp = JSON.parse(response.bodyText)
             let user = resp.participant
             user.authToken = resp.token
             this.$store.commit('login', user)
             this.$router.push('/')
           }).catch(function(error){
+            console.log(error)
             this.error = error.body.message
           })
         }
