@@ -515,7 +515,9 @@
               "phone": "9408866298"
             }
           ],
-          "rounds": [],
+          "rounds": [
+            "Expert talk by Prinkit Patel, Founder of Change Vadodara Campaign and highly experienced expert In field of Digital Marketing."
+          ],
           "tagline": "Promote, Persuade, Publicite",
           "teamSize": 1
         }
@@ -671,6 +673,35 @@
           ],
           "tagline": "Peace be Amplified, World be Rectified ! ",
           "teamSize": 1
+        },
+        {
+          "_id": "5bc854c5f01ee20013387f09",
+          "participants": [],
+          "department": "ee",
+          "description": "genesis event",
+          "prizeMoney": [
+            20
+          ],
+          "entryFee": 50,
+          "eventName": "Electro Musiciano",
+          "eventType": "tech",
+          "managers": [
+            {
+              "name": "Devansh Parikh",
+              "phone": "7490041535"
+            },
+            {
+              "name": "Vaibhav Yagneshwar",
+              "phone": "7383645136"
+            }
+          ],
+          "rounds": [
+            "To impart knowledge about Analog & Digital signals, ADC & DAC, harmonics,  Oscillators, Induction, Amplifiers, Filters, Timers, Piezoelectric effect, keyboard scaling and other knowledge required to get started with the Engineer's musical fantasies. A Quiz will be conducted based on the topics covered in the seminar.",
+            "In this round, participants will be given the necessary for making their own musical instruments. To make :- Simple Speaker  Electronic Keyboard  Simple Faraday electric guitar",
+            "Live performance of the band with their instruments made in round 2, with songs written by them. "
+          ],
+          "tagline": "Driven by the Power of Sound",
+          "teamSize": 2
         }
       ]
     },
@@ -855,6 +886,36 @@
           ],
           "tagline": "Everything you say or do matters.",
           "teamSize": 2
+        },
+        {
+          "_id": "5bc8568df01ee20013387f0a",
+          "participants": [],
+          "department": "non-tech",
+          "description": "genesis event",
+          "prizeMoney": [
+            20
+          ],
+          "entryFee": 20,
+          "eventName": "Viewfinder 2018",
+          "eventType": "non-tech",
+          "managers": [
+            {
+              "name": "Parth Makwana ",
+              "phone": "9427880297"
+            },
+            {
+              "name": "Aashutosh Sonigra",
+              "phone": "9426616954"
+            }
+          ],
+          "rounds": [
+            "A camera, no matter how many automatic features it may have, is a lifeless piece of equipment until a person uses it. It then becomes an uniquely responsive tool- an extension of the photographer's eye and mind. A photographer creates a picture by a process of selection. Photographer looking through VIEWFINDER must decide what to include and what to exclude from the scene. They select the distance from which to take the picture and precise angle that best suits their purpose. They select the instant in which to trip the shutter. Get your cameras out , adjust your lighting ;from  your composition!",
+            "Online Submission before 25th Oct,2018. Mail your photos at viewfinder2k18@gmail.com. Submit your photos with following format: Full Name, Contact Number, EXIF Details. Result will be declared on 26th  Oct,2018.",
+            "TOPICS :  1.\tColourful life 2.\tPatterns 3. Taste of India 4. Motion",
+            "RULES : Photos can be clicked in accordance with any of the following themes. 1. You have to submit min. 3 photos and max. 5 photos on any of the topic.  2. Manipulation is not allowed.  3. Winning criteria will be on the overall quality, innovation and coherence with the theme.   4. Top Photos will be displayed on Cover Wall of BVM. "
+          ],
+          "tagline": "Capturing life ; Creating art ",
+          "teamSize": 1
         }
       ]
     }
