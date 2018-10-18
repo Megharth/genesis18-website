@@ -21,6 +21,7 @@
         <div class="note">Note: Use the correct mobile as all the confirmations will be sent to it.</div>
         <button class="btn mx-auto" @click="react">Submit</button>
         <div class="error heading" v-if="error">Please fill all the fields correctly.</div>
+        <div class="errorMsg">{{errorMsg}}</div>
       </div>
     </div>
   </transition>
@@ -30,10 +31,13 @@
 <script>
 
   import navbarComponent from '../components/navbarComponent'
+  import VueRecaptcha from 'vue-recaptcha'
+
   export default{
     name: 'Register',
     components: {
-      navbarComponent
+      navbarComponent,
+      VueRecaptcha
     },
     data() {
       return {
@@ -42,6 +46,7 @@
         id: '',
         yearSelected: null,
         branchSelected: null,
+        captcha: false,
         error: false,
         errorMsg: null,
         yearOptions: [
@@ -104,10 +109,9 @@
             year: year.toString(),
             branch: this.branchSelected
           }).then(function(response) {
-            console.log(response)
             this.$router.push('/login')
           }).catch(function(error) {
-
+            this.errorMsg = error.body.message
           })
         }
         else
@@ -144,4 +148,9 @@
 
 .form-control
   margin-right: 10px
+
+.errorMsg
+  font-size: 22px
+  color: white
+  text-align: center
 </style>

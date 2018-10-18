@@ -2,13 +2,23 @@
   <transition name="slide-rotate">
     <div>
       <navbarComponent></navbarComponent>
-      <div class="container">
+      <div class="container" v-if="!captcha">
         <div class="heading">Cart</div>
         <orderComponent :order="user.pendingOrder"></orderComponent>
         <div class="row action-btns" v-if="user.pendingOrder.sum">
           <div class="btn cancel-btn mx-auto" @click="cancelOrder">Cancel Order</div>
-          <div class="btn mx-auto" @click="generateOrder">Submit Order</div>
+          <div class="btn mx-auto" @click="captcha = true">Submit Order</div>
         </div>
+      </div>
+      <div class="captcha container" v-if="captcha">
+        <div class="heading">confirm Order</div>
+        <vue-recaptcha
+            ref="recaptcha"
+            @verify="onVerify"
+            data-theme="dark"
+            align="center"
+            sitekey="6LfsoXUUAAAAACYOwRAYxsr0elOLW07pufJom1Ys">
+        </vue-recaptcha>
       </div>
       <div class="error sub-heading" v-if="error">{{error}}</div>
     </div>
@@ -18,34 +28,37 @@
 <script>
 import navbarComponent from '../components/navbarComponent'
 import orderComponent from '../components/orderComponent'
+import VueRecaptcha from 'vue-recaptcha'
 
 import {mapState} from 'vuex'
 export default {
   name: 'cart',
   components: {
     navbarComponent,
-    orderComponent
+    orderComponent,
+    VueRecaptcha
   },
   data() {
     return {
-      error: null
+      error: null,
+      captcha: false
     }
   },
   methods: {
-    generateOrder() {
+    generateOrder(recaptchaToken) {
       let idArray = this.user.pendingOrder.events.map((event)=> {
         return event._id
       })
       this.$http.post('https://floating-mesa-45263.herokuapp.com/participant', {
         id: this.user.id,
         sum: parseInt(this.user.pendingOrder.sum),
-        events: idArray
+        events: idArray,
+        recaptchaToken: recaptchaToken
       }, {
         headers: {
           Authorization: this.user.authToken
         }
       }).then(function(response){
-        console.log(response)
         this.$store.commit('confirmOrder')
         this.$store.commit('clearCart')
         this.$router.push('/orders')
@@ -55,6 +68,9 @@ export default {
     },
     cancelOrder() {
       this.$store.commit('clearCart')
+    },
+    onVerify: function (response) {
+      this.generateOrder(response)
     }
   },
   computed: {
@@ -100,4 +116,7 @@ export default {
 
 .action-btns
   margin-top: 20px
+
+.captcha
+  text-align: center
 </style>

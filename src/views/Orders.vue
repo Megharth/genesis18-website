@@ -4,6 +4,9 @@
       <navbarComponent/>
       <div class="container">
         <div class="heading">Orders</div>
+        <div class="note">
+          Note: Token will be resolved on the basis of first come first serve basis. Management has rights to cancel your token if the entries of the event gets filled up.
+        </div>
         <div class="sub-heading" v-if="orders.length < 1">You have not placed any orders yet</div>
         <div v-for="order in orders" class="orders">
           <orderComponent :order="order"/>
@@ -82,8 +85,9 @@ export default {
 .orders
   margin-top: 20px
 
-.sub-heading
+.sub-heading, .note
   text-align: center
+  color: white
 
 
 
