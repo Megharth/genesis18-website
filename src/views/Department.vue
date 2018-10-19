@@ -55,7 +55,6 @@ export default {
       this.$router.push('/cart')
     },
     addToCart(event, index) {
-      console.log(event)
       if(this.user.authToken){
         this.$store.commit('addToCart', event)
       }
@@ -73,7 +72,6 @@ export default {
     let id = this.$route.params.id
     this.$store.state.departments.forEach((department) => {
       if(department.id === id){
-        console.log(department)
         this.department = department.name
         this.events = department.events
       }

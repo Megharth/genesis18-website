@@ -73,6 +73,9 @@ export const store = new Vuex.Store({
       state.user.pendingOrder.events = []
       state.user.pendingOrder.sum = 0
       localStorage.setItem('user', JSON.stringify(state.user))
+    },
+    setOrder(state, order) {
+      state.order = order
     }
   }
 })

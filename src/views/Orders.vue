@@ -47,6 +47,10 @@ export default {
       let orders = response.body
       let eventsList = orders.map(order => order.events)
       let sums = orders.map(order => order.sum)
+      let paidStatus = orders.map(order => order.paid)
+      let paidTo = orders.map(order => order.paidTo)
+      let tokens = orders.map(order => order.token)
+
       let finalEventList = eventsList.map(list => {
         let temp = []
         list.map(id => {
@@ -61,11 +65,14 @@ export default {
       for(let i=0; i<orders.length; i++){
         finalOrder.push({
           events: finalEventList[i],
-          sum: sums[i]
+          sum: sums[i],
+          paid: paidStatus[i],
+          paidTo: paidTo[i],
+          token: tokens[i]
         })
       }
 
-      this.$store.state.order = finalOrder
+      this.$store.commit('setOrder', finalOrder)
     }).catch(function(error) {
       console.log(error)
     })

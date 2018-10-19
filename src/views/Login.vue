@@ -53,7 +53,6 @@
             username: this.id.toLowerCase(),
             password: this.password
           }).then(function(response) {
-            console.log(response)
             let resp = JSON.parse(response.bodyText)
             let user = resp.participant
             user.authToken = resp.token
