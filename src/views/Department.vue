@@ -22,7 +22,8 @@
                   </div>
                   <div class="col-sm-2">{{manager.phone}}</div>
                 </div>
-                <div class="sub-heading">Entry Fee: Rs. {{event.entryFee}}</div>
+                <div class="sub-heading">Entry Fee: Rs. {{event.entryFee}}/team</div>
+                <div class="sub-heading">Team of : {{event.teamSize}}</div>
                 <button class="cart-btn btn ml-auto" :disabled="events[index].checked"
                         @click="addToCart(event, index)">Add to cart</button>
               </b-card-body>

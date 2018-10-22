@@ -40,6 +40,13 @@
           </div>
         </div>
       </div>
+      <div class="sponsors">
+        <div class="heading">Sponsors</div>
+        <div class="cards">
+          <div class="sponsor-img card"><img src="../assets/ice_logo.png" alt=""></div>
+          <div class="sponsor-img card"><img src="../assets/horizon_logo.png" alt=""></div>
+        </div>
+      </div>
     </div>
   </transition>
 </template>
