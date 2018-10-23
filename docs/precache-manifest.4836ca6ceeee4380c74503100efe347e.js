@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "6a9dc3beb41b125cae12af596f0e805d",
-    "url": "/fonts/NeptuneTrial-Bold.6a9dc3be.woff2"
+    "revision": "712d4f68b6ffbabc083274f013417746",
+    "url": "/fonts/Neptune_Trial.712d4f68.otf"
   },
   {
     "revision": "735ab4f94fbcd57074377afca324c813",
     "url": "/robots.txt"
   },
   {
-    "revision": "712d4f68b6ffbabc083274f013417746",
-    "url": "/fonts/Neptune_Trial.712d4f68.otf"
+    "revision": "49ab2038fa0c7edd233aebdb670b6365",
+    "url": "/img/logo.49ab2038.png"
   },
   {
     "revision": "c564f65e7e3736830add",
@@ -28,16 +28,16 @@ self.__precacheManifest = [
     "url": "/fonts/NeptuneTrial-Bold.d467b5b9.ttf"
   },
   {
-    "revision": "2cd3a2aac7b1866983e6",
-    "url": "/js/app.f5f26233.js"
+    "revision": "6a9dc3beb41b125cae12af596f0e805d",
+    "url": "/fonts/NeptuneTrial-Bold.6a9dc3be.woff2"
+  },
+  {
+    "revision": "1641922cb78c99a260b9",
+    "url": "/js/app.bff9ea5d.js"
   },
   {
     "revision": "c564f65e7e3736830add",
     "url": "/js/chunk-vendors.a9c9bbe2.js"
-  },
-  {
-    "revision": "49ab2038fa0c7edd233aebdb670b6365",
-    "url": "/img/logo.49ab2038.png"
   },
   {
     "revision": "ddd3a67b38a170b95404519fab901211",
@@ -48,15 +48,19 @@ self.__precacheManifest = [
     "url": "/img/ice_logo.347ed15e.png"
   },
   {
+    "revision": "58b51422b9e6780e3ace67c3b8cfc2fe",
+    "url": "/img/Kanan.58b51422.png"
+  },
+  {
     "revision": "9be935303302b9ed7425258ac1feea8f",
     "url": "/img/horizon_logo.9be93530.png"
   },
   {
-    "revision": "69b398bc83892e6a0b5df42c1b679319",
+    "revision": "a69911949a6d37f52ac79d26e6dcf184",
     "url": "/index.html"
   },
   {
-    "revision": "2cd3a2aac7b1866983e6",
-    "url": "/css/app.c6e596d2.css"
+    "revision": "1641922cb78c99a260b9",
+    "url": "/css/app.69bba94a.css"
   }
 ];
