@@ -918,6 +918,82 @@
           "teamSize": 1
         }
       ]
+    },
+    {
+      "name": "Workshops and Expert Lectures",
+      "id": "workshops",
+      "events": [
+        {
+          "_id": "w1",
+          "eventName": "Advanced Controller for active power filters",
+          "rounds" :[
+            "Expert lecture by Parag Kanjiya. Branch: Electrical"
+          ]
+        },
+        {
+          "_id": "w2",
+          "eventName": "Embedded Systems",
+          "rounds" :[
+            "Expert lecture by Samir Shroff. Branch: EC/EL"
+          ]
+        },
+        {
+          "_id": "w3",
+          "eventName": "Fundamentals of Digital Marketing",
+          "rounds" :[
+            "Expert lecture by Prinkit Patel. Branch: All"
+          ]
+        },
+        {
+          "_id": "w4",
+          "eventName": "Startup talks and Q&A",
+          "rounds" :[
+            "Expert lecture by Shikhar Maheshwari. Branch: All"
+          ]
+        },
+        {
+          "_id": "w5",
+          "eventName": "Contstuction bars by POLAAD",
+          "rounds" :[
+            "Expert lecture by Mehul Bhatt and Avinash Bhardwaj. Branch: Civil"
+          ]
+        },
+        {
+          "_id": "w6",
+          "eventName": "Corporate culter & Opportunities in Production Engineering",
+          "rounds" :[
+            "Expert lecture by by S. K. Mishra. Branch: Production"
+          ]
+        },
+        {
+          "_id": "w7",
+          "eventName": "Towards success in Selection Process - a training for group discussion and interviewing skills",
+          "rounds" :[
+            "Expert lecture by Vaibhavi Nanavati. Branch: All. Year: 4th"
+          ]
+        },
+        {
+          "_id": "w8",
+          "eventName": "Basics of IOT and automation",
+          "rounds" :[
+            "Expert lecture by Mudit Kothari. Branch: Mechanical"
+          ]
+        },
+        {
+          "_id": "w9",
+          "eventName": "Software Define Network",
+          "rounds" :[
+            "Workshop by Mr. Mehul Hada. Branch: CP/IT"
+          ]
+        },
+        {
+          "_id": "w10",
+          "eventName": "Proteus Workshop",
+          "rounds" :[
+            "Workshop by Swapnil Arya. Branch: EE/EC/EL"
+          ]
+        }
+      ]
     }
   ]
 }

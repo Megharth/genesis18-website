@@ -47,6 +47,10 @@
           <div class="sponsor-img card"><img src="../assets/horizon_logo.png" alt=""></div>
           <div class="sponsor-img card"><img src="../assets/Kanan.png" alt=""></div>
         </div>
+        <div class="cards">
+          <div class="small-sponsor-img card"><img src="../assets/logos.png" alt=""></div>
+          <div class="small-sponsor-img card"><img src="../assets/CSA.png" alt=""></div>
+        </div>
       </div>
     </div>
   </transition>

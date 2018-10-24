@@ -4,7 +4,7 @@
       <navbarComponent></navbarComponent>
       <div class="container">
         <div class="heading">{{department}}</div>
-        <div v-for="(event, index) in events">
+        <div v-for="(event, index) in events" v-if="event.description">
           <b-card no-body class="mb-1">
             <b-card-header header-tag="header" class="p-1" role="tab">
               <b-btn block href="#" v-b-toggle="event._id">{{event.eventName}}</b-btn>
@@ -32,6 +32,15 @@
         </div>
         <div class="checkout-btn btn ml-auto" v-if="user.pendingOrder.sum" @click="goToCart">Proceed to
           Checkout</div>
+        <div class="workshops">
+          <div v-for="(event, index) in events" v-if="!event.description" class="workshop">
+            <div class="card">
+              <div class="card-header workshop-header">{{event.eventName}}</div>
+              <div class="card-body workshop-body" v-for="round in event.rounds">{{round}}</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </transition>
@@ -127,5 +136,25 @@ export default {
   margin-bottom: 5px
   text-transform: uppercase
   font-weight: bolder
+
+.workshops
+  text-align: center
+  .workshop
+    display: inline-block
+    .card
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 300px
+      margin: 10px
+      height: 200px
+      .card-header
+        height: 150px
+    .workshop-header
+      text-transform: uppercase
+      background: #5A6268
+      font-weight: bolder
+      color: white
+
 
 </style>
