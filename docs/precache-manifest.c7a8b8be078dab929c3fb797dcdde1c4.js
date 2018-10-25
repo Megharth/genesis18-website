@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/img/noise1.ddd3a67b.gif"
   },
   {
-    "revision": "c564f65e7e3736830add",
+    "revision": "0fc78cd6bf8d649c1b8d",
     "url": "/css/chunk-vendors.c9717765.css"
   },
   {
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/fonts/Neptune_Trial.712d4f68.otf"
   },
   {
-    "revision": "f888e9eeaf79e9cc05b2",
-    "url": "/js/app.4407befa.js"
+    "revision": "8d775847059110f26b63",
+    "url": "/js/app.adc55ab5.js"
   },
   {
-    "revision": "c564f65e7e3736830add",
-    "url": "/js/chunk-vendors.a9c9bbe2.js"
+    "revision": "0fc78cd6bf8d649c1b8d",
+    "url": "/js/chunk-vendors.a54eb31d.js"
   },
   {
     "revision": "1f616277f1cf12dd5a796803481fb380",
@@ -64,11 +64,11 @@ self.__precacheManifest = [
     "url": "/img/horizon_logo.9be93530.png"
   },
   {
-    "revision": "8a94a94c57cb42738998f91c3df62f20",
+    "revision": "d5c128190ecc4cf4a387dd9833d13563",
     "url": "/index.html"
   },
   {
-    "revision": "f888e9eeaf79e9cc05b2",
-    "url": "/css/app.e9e9d0ae.css"
+    "revision": "8d775847059110f26b63",
+    "url": "/css/app.0f82b9f6.css"
   }
 ];

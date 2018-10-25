@@ -6,6 +6,7 @@ import Register from './views/Register'
 import Department from './views/Department'
 import Cart from './views/Cart'
 import Orders from './views/Orders'
+import Team from './views/Team'
 import { store } from './store/index'
 
 Vue.use(Router)
@@ -65,6 +66,11 @@ export default new Router({
           else
             next()
       }
+    },
+    {
+      path: '/team',
+      name: 'team',
+      component: Team
     }
   ]
 })

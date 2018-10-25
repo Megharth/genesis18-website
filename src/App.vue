@@ -5,12 +5,8 @@
 </template>
 
 <script>
-import navbarComponent from './components/navbarComponent'
 export default {
-  name: 'MainComponent',
-  components: {
-    navbarComponent
-  }
+  name: 'MainComponent'
 }
 </script>
 <style lang="sass">
