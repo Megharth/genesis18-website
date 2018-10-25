@@ -49,14 +49,14 @@ export default {
       team: {
         leaders: [
           {
-            name: "Harshang Patel",
-            position: "Joint General Secretary",
-            number: 9429958709
-          },
-          {
             name: "Raj Ambani",
             position: "General Secretary",
             number: 9106039994
+          },
+          {
+            name: "Harshang Patel",
+            position: "Joint General Secretary",
+            number: 9429958709
           },
           {
             name: "Kalyani Bhatt",
