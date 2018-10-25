@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/fonts/Neptune_Trial.712d4f68.otf"
   },
   {
-    "revision": "9905bd4416e6c6f53fac",
-    "url": "/js/app.6e62fef8.js"
+    "revision": "0e58ac5c66cc296d486c",
+    "url": "/js/app.83e15fad.js"
   },
   {
     "revision": "0fc78cd6bf8d649c1b8d",
@@ -64,11 +64,11 @@ self.__precacheManifest = [
     "url": "/img/horizon_logo.9be93530.png"
   },
   {
-    "revision": "6d2bb4dfdcc82250f360a4797a023b2a",
+    "revision": "8d1290f491627ed6d2747cafb890980a",
     "url": "/index.html"
   },
   {
-    "revision": "9905bd4416e6c6f53fac",
+    "revision": "0e58ac5c66cc296d486c",
     "url": "/css/app.1d75c256.css"
   }
 ];
