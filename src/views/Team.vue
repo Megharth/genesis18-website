@@ -114,6 +114,10 @@ export default {
             position: "Developers Head"
           },
           {
+            name: "Rushi Rami",
+            position: "Developers Head"
+          },
+          {
             name: "Raj Kadhi",
             position: "Documentation Head"
           }
